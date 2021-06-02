@@ -29,7 +29,7 @@
 
                     @auth
                       <li class="nav-item mx-2">
-                        <a class="nav-link" href="#" >{{ auth()->user()->name }}</a>
+                        <a class="nav-link" href="{{ route('profile') }}" >{{ auth()->user()->name }}</a>
                       </li>
                       <li class="nav-item mx-2">
                         <form action="{{ route('logout') }}" method="post">
