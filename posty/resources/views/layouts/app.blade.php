@@ -20,7 +20,7 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('dashboard') }}">Dashboard</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{ route('posts') }}">Posts</a>
                   </li>
                 </ul>
                 
@@ -29,7 +29,7 @@
 
                     @auth
                       <li class="nav-item mx-2">
-                        <a class="nav-link" href="#" >User</a>
+                        <a class="nav-link" href="#" >{{ auth()->user()->name }}</a>
                       </li>
                       <li class="nav-item mx-2">
                         <form action="{{ route('logout') }}" method="post">

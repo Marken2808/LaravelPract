@@ -44,7 +44,12 @@
                     @enderror
                 </div>
                 
-                <div class="mt-4">
+                <div class="my-2 form-check">
+                    <input type="checkbox" class="form-check-input" name="remember" id="remember">
+                    <label class="form-check-label" for="remember">Remember me</label>
+                  </div>
+
+                <div class="mt-3">
                     <button type="submit" class="btn btn-primary w-100">Login</button>
                 </div>
                 
