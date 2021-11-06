@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  php-apache:
+    container_name: php-apache
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    ports:
+        - '8080:80'
+    volumes:
+      - ./laravel-aws:/var/www/laravel_aws
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    
