@@ -6,7 +6,7 @@ services:
     container_name: database
     restart: always
     environment:
-      POSTGRES_PASSWORD: secret
+      POSTGRES_PASSWORD: 5d977e4aab32bb030d2aee43c1b0a949027450360e0ef83a788cc0958b47bf74
       POSTGRES_DB: laravel_docker
     volumes:
       - ./postgres:/var/lib/postgres
