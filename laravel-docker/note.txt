@@ -1,1 +1,26 @@
 https://www.twilio.com/blog/get-started-docker-laravel
+
+# deploy on heroku 
+(on working folder, client side)
+>_ git init
+>_ heroku git:remote -a mylaraveldocker
+>_ git add .
+>_ git commit -am "make it better"
+>_ git push heroku master
+
+# app config var
+>_ heroku config:add APP_DEBUG = true
+>_ heroku config:add APP_ENV = local
+>_ heroku config:add APP_KEY = base64:...
+>_ heroku config:add APP_NAME = ${app_name}
+>_ heroku config:add APP_URL = ${heroku_url}
+
+#database config var
+>_ heroku pg:credentials:url (fetching credential)
+>_ heroku config:add DATABASE_URL = postgres://...
+>_ heroku config:add DB_CONNECTION = pgsql
+>_ heroku config:add DB_DATABASE = ...
+>_ heroku config:add DB_HOST = ... amazonaws.com
+>_ heroku config:add DB_PORT = 5432
+>_ heroku config:add DB_USERNAME = ...
+>_ heroku config:add DB_PASSWORD = ...
