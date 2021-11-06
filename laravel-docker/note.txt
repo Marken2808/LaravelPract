@@ -15,7 +15,7 @@ https://www.twilio.com/blog/get-started-docker-laravel
 >_ heroku config:add APP_NAME = ${app_name}
 >_ heroku config:add APP_URL = ${heroku_url}
 
-#database config var
+# database config var
 >_ heroku pg:credentials:url (fetching credential)
 >_ heroku config:add DATABASE_URL = postgres://...
 >_ heroku config:add DB_CONNECTION = pgsql
@@ -24,3 +24,7 @@ https://www.twilio.com/blog/get-started-docker-laravel
 >_ heroku config:add DB_PORT = 5432
 >_ heroku config:add DB_USERNAME = ...
 >_ heroku config:add DB_PASSWORD = ...
+
+# database bash on heroku
+>_ heroku run bash
+>_ heroku run php artisan migrate
