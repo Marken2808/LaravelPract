@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  database:
+    image: postgres:latest
+    container_name: database
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: laravel_docker
+    volumes:
+      - ./postgres:/var/lib/postgres
+    ports:
+      - '5432:5432'
+
+  php-apache:
+    container_name: php-apache
+    build:
+      context: .
+      dockerfile: ./php/php.dockerfile
+    ports:
+        - '8080:80'
+    volumes:
+      - ./src:/var/www/laravel_docker
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    depends_on:
+      - database
