@@ -5,7 +5,7 @@ services:
     container_name: php-apache
     build:
       context: .
-      dockerfile: php.dockerfile
+      dockerfile: Dockerfile
     ports:
         - '8080:80'
     volumes:

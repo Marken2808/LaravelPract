@@ -1,0 +1,8 @@
+AKIARR5CRQREDOL4FJ73
+J9gy/33RZ2SX8DrhkelAX2bsmpKzgLQg9M4sfGPU
+107178198088.dkr.ecr.eu-west-3.amazonaws.com/app
+
+
+# 
+login ECR:
+>_ aws ecr get-login-password --region eu-west-3 |docker login --username AWS --password-stdin 107178198088.dkr.ecr.eu-west-3.amazonaws.com 
