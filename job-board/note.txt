@@ -1,0 +1,5 @@
+# create model
+>_ php artisan make:model ${model_name} --migration  
+
+# create relationship
+>_ php artisan make:migration ${create_which_table_mapping}
