@@ -12,7 +12,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./src:/var/www/html:delegated ############################
+      - ./job-board:/var/www/html:delegated ############################
     depends_on:
       - php
       - mysql
@@ -60,7 +60,7 @@ services:
       dockerfile: php.dockerfile
     container_name: php
     volumes:
-      - ./src:/var/www/html:delegated
+      - ./job-board:/var/www/html:delegated
     # ports:
     #     - "9000:9000"
     # networks:
