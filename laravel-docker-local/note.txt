@@ -6,3 +6,9 @@
 
 # create migration
 >_ docker-compose exec php php /var/www/html/artisan make:migration create_${migration_relationship}_table
+
+# seed
+>_ docker-compose exec php php /var/www/html/artisan db:seed
+
+# create factory
+>_ docker-compose exec php php /var/www/html/artisan make:factory ${name_factory} --model=${name}
