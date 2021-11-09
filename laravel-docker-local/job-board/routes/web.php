@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return 'Docker Here!';
+    return view('test', ['name'=>'DOCKER TEST']);
 });
