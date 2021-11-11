@@ -12,3 +12,11 @@
 
 # create factory
 >_ docker-compose exec php php /var/www/html/artisan make:factory ${name_factory} --model=${name}
+
+---
+
+# run
+>_ docker-compose run --rm
+>_ // + composer require ${package}
+>_ // + npm install && npm run dev
+>_ // + artisan migrate
