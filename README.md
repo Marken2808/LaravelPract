@@ -1,7 +1,7 @@
-### `Laravel` - `Postgres` - `Docker` - `Heroku`
+### `Laravel` - `Postgres` - `Docker`
 ## Project [Top Quotes](https://github.com/Marken2808/PhpPract/tree/main/laravel-docker-heroku) deployed [here](https://mylaraveldocker.herokuapp.com/)
 
-### `Laravel` - `Stripe` - `MySQL` - `Docker` -  `(Local)` 
+### `Laravel` - `Stripe` - `MySQL` - `Docker`
 `laravel/cashier` - `laravel/breeze` - `erusev/parsedown`
 ## Project [Job board](https://github.com/Marken2808/PhpPract/tree/main/laravel-docker-local) deployed [here](https://laravel-docker-job-board.herokuapp.com/)
 
