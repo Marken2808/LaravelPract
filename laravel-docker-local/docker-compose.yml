@@ -27,12 +27,26 @@ services:
       - 3306:3306
     tty: true
     environment:
-      MYSQL_DATABASE: tolobase
-      MYSQL_USER: tolobase
-      MYSQL_PASSWORD: secret
+      # DB_CONNECTION=mysql
+      # DB_HOST=eu-cdbr-west-01.cleardb.com
+      # DB_PORT=3306
+      # DB_DATABASE=heroku_7df5c5bfe89be30
+      # DB_USERNAME=b00618a90c4987
+      # DB_PASSWORD=539632ae
+
+      MYSQL_DATABASE: heroku_7df5c5bfe89be30
+      MYSQL_USER: b00618a90c4987
+      MYSQL_PASSWORD: 539632ae
       MYSQL_ROOT_PASSWORD: secret
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+      # SERVICE_TAGS: dev
+      # SERVICE_NAME: mysql
+      
+      # MYSQL_DATABASE: tolobase
+      # MYSQL_USER: tolobase
+      # MYSQL_PASSWORD: secret
+      # MYSQL_ROOT_PASSWORD: secret
+      # SERVICE_TAGS: dev
+      # SERVICE_NAME: mysql
     volumes: 
       - ./mysql:/var/lib/mysql
     # networks:

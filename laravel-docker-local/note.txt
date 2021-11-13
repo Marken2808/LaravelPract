@@ -1,17 +1,23 @@
 # migrate
->_ docker-compose exec php php /var/www/html/artisan migrate
+>_ docker-compose run --rm artisan migrate
+>_ // :refresh
 
 # create model
->_ docker-compose exec php php /var/www/html/artisan make:model ${model_name} --migration
+>_ docker-compose run --rm artisan make:model ${model_name} --migration
 
 # create migration
->_ docker-compose exec php php /var/www/html/artisan make:migration create_${migration_relationship}_table
+>_ docker-compose run --rm artisan make:migration create_${migration_relationship}_table
 
 # seed
->_ docker-compose exec php php /var/www/html/artisan db:seed
+>_ docker-compose run --rm artisan db:seed
+>_ docker-compose run --rm artisan db:wipe (drop tables) 
 
 # create factory
->_ docker-compose exec php php /var/www/html/artisan make:factory ${name_factory} --model=${name}
+>_ docker-compose run --rm artisan make:factory ${name_factory} --model=${name}
+
+# link storage img
+>_ docker-compose run --rm artisan storage:link
+
 
 ---
 
