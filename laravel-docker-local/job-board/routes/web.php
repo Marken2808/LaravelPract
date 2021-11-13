@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\ListingController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,27 +16,23 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', [Controllers\ListingController::class, 'index'])
+Route::get('/', [ListingController::class, 'index'])
     -> name('listings.index');
 
-Route::get('/new', [Controllers\ListingController::class, 'create'])
+Route::get('/new', [ListingController::class, 'create'])
     -> name('listings.create');
 
-Route::post('/new', [Controllers\ListingController::class, 'store'])
+Route::post('/new', [ListingController::class, 'store'])
     -> name('listings.store');
 
-Route::get('/{listing}', [Controllers\ListingController::class, 'show'])
-    -> name('listings.show');
-
-Route::get('/{listing}/apply', [Controllers\ListingController::class, 'apply'])
-    -> name('listings.apply');
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboard', function (Request $request) {
+    return view('dashboard', ['listings' => $request->user()->listings]);
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/{listing}', [ListingController::class, 'show'])
+    -> name('listings.show');
+
+Route::get('/{listing}/apply', [ListingController::class, 'apply'])
+    -> name('listings.apply');

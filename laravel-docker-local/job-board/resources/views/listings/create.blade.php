@@ -6,7 +6,7 @@
                     Create a new listing ($99)
                 </h2>
             </div>
-            <!-- @if($errors->any())
+            @if($errors->any())
                 <div class="mb-4 p-4 bg-red-200 text-red-800">
                     <ul>
                         @foreach($errors->all() as $error)
@@ -151,10 +151,10 @@
                         value="">
                     <button type="submit" id="form_submit" class="block w-full items-center bg-indigo-500 text-white border-0 py-2 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0">Pay + Continue</button>
                 </div>
-            </form> -->
+            </form>
         </div>
     </section>
-    <!-- <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     <script>
         const stripe = Stripe("{{ env('STRIPE_KEY') }}");
         const elements = stripe.elements();
@@ -178,5 +178,5 @@
                 document.getElementById('payment_form').submit();
             }
         })
-    </script> -->
+    </script>
 </x-app-layout>
