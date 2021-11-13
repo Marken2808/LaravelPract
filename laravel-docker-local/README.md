@@ -10,4 +10,4 @@
 
 ### `Laravel` - `Stripe` - `MySQL` - `Docker`
 `laravel/cashier` - `laravel/breeze` - `erusev/parsedown`
-## view [Job board](https://laravel-docker-job-board.herokuapp.com/)
+## view [Job board](http://laravel-docker-job-board.herokuapp.com/)
