@@ -4,15 +4,15 @@ version: '3.9'
 #   laravel:
 
 services:
+
   nginx:
-    build:
-      context: .
-      dockerfile: nginx.Dockerfile
+    image: nginx:stable-alpine
     container_name: nginx
     ports:
       - 80:80
     volumes:
-      - ./job-board:/var/www/html:delegated ############################
+      - ./job-board:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
       - mysql
@@ -41,7 +41,7 @@ services:
   php:
     build:
       context: .
-      dockerfile: php.dockerfile
+      dockerfile: Dockerfile
     container_name: php
     volumes:
       - ./job-board:/var/www/html:delegated
@@ -76,7 +76,7 @@ services:
   artisan:
     build:
       context: .
-      dockerfile: php.dockerfile
+      dockerfile: Dockerfile
     container_name: artisan
     entrypoint: ['/var/www/html/artisan']
     volumes:
@@ -89,7 +89,6 @@ services:
     image: node:13.7
     container_name: npm
     entrypoint: ['npm']
-    # command: bash -c "npm install && npm start"
     ports:
       - 3000:3000
     volumes:
