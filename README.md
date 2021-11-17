@@ -1,4 +1,5 @@
 ### `Laravel` - `Postgres` - `Docker`
+`laravel/breeze` -
 ## Project [Top Quotes](https://github.com/Marken2808/PhpPract/tree/main/laravel-docker-heroku) deployed [here](http://mylaraveldocker.herokuapp.com/)
 
 ### `Laravel` - `Stripe` - `MySQL` - `Docker`
