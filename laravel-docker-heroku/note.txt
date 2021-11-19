@@ -28,3 +28,7 @@ https://www.twilio.com/blog/get-started-docker-laravel
 # database bash on heroku
 >_ heroku run bash
 >_ heroku run php artisan migrate
+
+### note:
+after install new laravel plugin via composer, artisan _:install
+need migrate again!!!
