@@ -32,3 +32,13 @@ https://www.twilio.com/blog/get-started-docker-laravel
 ### note:
 after install new laravel plugin via composer, artisan _:install
 need migrate again!!!
+
+--------------note jetstream------------------
+
+# installation
+
+>_ composer require laravel/jetstream
+>_ php artisan jetstream:install livewire
+>_ docker-compose run --rm npm install && npm run dev
+>_ docker-compose run --rm artisan migrate
+>_ php artisan livewire:publish
