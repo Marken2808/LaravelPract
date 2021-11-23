@@ -1,8 +1,10 @@
 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
     @foreach($live_posts as $post)
     <div class="p-4 border-b border-gray-200">
-        <h2 class="text-xl font-medium"> {{ $post->title }}
-
+        <h2 class="text-xl font-medium"> 
+            <a href="#" wire:click.prevent="editPost({{ $post->id }})">
+                {{ $post->title }}
+            </a>
         </h2>
         <p class="text-gray-600 leading-relaxed">{{ $post->body }}</p>
     </div>
@@ -11,7 +13,7 @@
     <div class="p-4">
         <x-jet-button wire:click="$set('showPostModal', true)">Create Post</x-jet-button>
     </div>
-    
+
     <x-jet-dialog-modal wire:model="showPostModal">
         <x-slot name="title">
             {{ __('Create A New Post') }}
@@ -24,7 +26,7 @@
                 <x-jet-input-error for="title" class="mt-2" />
             </div>
 
-            <!-- Email -->
+            
             <div class="col-span-6 sm:col-span-4">
                 <x-jet-label for="body" value="{{ __('Body') }}" />
                 <x-jet-input id="body" type="text" class="mt-1 block w-full" wire:model.defer="state.body" />
