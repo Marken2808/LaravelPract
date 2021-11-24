@@ -26,11 +26,15 @@ class Post extends Component
     public function savePost()
     {
         
-        if ($this->state['id'] != null) {   // set id null to find exist id
+        if ($this->state['id']) {   // set id null to find exist id
             $post = PostModel::find($this->state['id'])
                 ->update(Arr::only($this->state, ['title', 'body']));
         } else {
-            $post = PostModel::create($this->state);
+            $this->create = [   // clone state,
+                'title' => $this->state['title'],
+                'body' => $this->state['body'],
+            ];
+            $post = PostModel::create($this->create);
         }
 
         if($post){
@@ -41,21 +45,21 @@ class Post extends Component
 
     public function editPost(PostModel $post)
     {
+        $this->showPostModal = true;
         $this->state = [
             'id' => $post->id,
             'title' => $post->title,
             'body' => $post->body,
         ];
-        $this->showPostModal = true;
     }
 
     public function resetState()
     {
         $this->showPostModal = false;
         $this->state = [
-            // 'id' => null,
+            'id' => null,
             'title' => '',
-            'body' => ''
+            'body' => '',
         ]; 
     }
 }
