@@ -10,6 +10,9 @@
 `league/flysystem` - `tailwind`
 ## Project [Up & Down image](https://github.com/Marken2808/PhpPract/tree/main/laravel-docker-aws) deployed [here](https://aws-laravel.herokuapp.com/)
 
+### `Laravel` - `Postgres` - `Docker`
+## Project [Social Web](https://github.com/Marken2808/PhpPract/tree/main/sociality) deployed [here](https://toloworld.herokuapp.com/)
+
 ### `Laravel`
 `boostrap`
 ## Project [Blog](https://github.com/Marken2808/PhpPract/tree/main/posty) deployed [here](http://tuanblog.herokuapp.com/posts)
