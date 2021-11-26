@@ -19,8 +19,8 @@ services:
     container_name: database
     restart: always
     environment:
-      POSTGRES_PASSWORD: 5d977e4aab32bb030d2aee43c1b0a949027450360e0ef83a788cc0958b47bf74
-      POSTGRES_DB: d8b4rsqoj1rl7l
+      POSTGRES_PASSWORD: 82b932fe1440c01d38de0968f81df71ee06b9d0392c6bda728a489c7b6407084
+      POSTGRES_DB: d6fb8urg1bkukl
     volumes:
       - ./postgres:/var/lib/postgres
     ports:

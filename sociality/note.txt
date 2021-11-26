@@ -1,0 +1,9 @@
+"dbname=d6fb8urg1bkukl 
+host=ec2-176-34-105-15.eu-west-1.compute.amazonaws.com 
+port=5432 
+user=qogacdwupskqmb 
+password=82b932fe1440c01d38de0968f81df71ee06b9d0392c6bda728a489c7b6407084 
+sslmode=require"
+
+Connection URL:
+   postgres://qogacdwupskqmb:82b932fe1440c01d38de0968f81df71ee06b9d0392c6bda728a489c7b6407084@ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432/d6fb8urg1bkukl
