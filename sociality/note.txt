@@ -1,9 +1,8 @@
-"dbname=d6fb8urg1bkukl 
-host=ec2-176-34-105-15.eu-west-1.compute.amazonaws.com 
+"dbname=d99k5c35cdejdf 
+host=ec2-54-228-139-34.eu-west-1.compute.amazonaws.com 
 port=5432 
-user=qogacdwupskqmb 
-password=82b932fe1440c01d38de0968f81df71ee06b9d0392c6bda728a489c7b6407084 
-sslmode=require"
+user=ukaezcccczuttq 
+password=17a85725458036daf13ea9e136974cf72c23251dab80ec028814c2be7577eb0a sslmode=require"
 
 Connection URL:
-   postgres://qogacdwupskqmb:82b932fe1440c01d38de0968f81df71ee06b9d0392c6bda728a489c7b6407084@ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432/d6fb8urg1bkukl
+   postgres://ukaezcccczuttq:17a85725458036daf13ea9e136974cf72c23251dab80ec028814c2be7577eb0a@ec2-54-228-139-34.eu-west-1.compute.amazonaws.com:5432/d99k5c35cdejdf
