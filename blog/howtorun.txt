@@ -1,0 +1,24 @@
+install laravel:
+>composer create-project --prefer-dist laravel/laravel blog
+>composer require laravel/ui
+
+install vue:
+>php artisan ui vue
+>npm install
+
+run on MacOs (require inside XAMPP>htdocs>) for BrowserSync:
+>npm cache clean --force   
+>npm install npm fix audit
+>npm run development
+then >npm run watch-poll  
+
+create table, model, seeder, resource:
+>php artisan make:model Upcoming -m
+>php artisan make:seeder UpcomingSeeder
+>php artisan make:resource UpcomingResource
+
+run seeder:
+>php artisan db:seed --class=UpcomingSeeder
+
+migrate database created from phpmyadmin
+>php artisan migrate
