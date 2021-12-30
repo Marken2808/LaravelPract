@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login/github', [LoginController::class, 'github']);
-Route::get('/login/github/redirect', [LoginController::class, 'githubRedirect']);
+// Route::get('/login/github', [LoginController::class, 'github']);
+// Route::get('/login/github/redirect', [LoginController::class, 'githubRedirect']);
 
 
 
@@ -27,8 +27,8 @@ Route::get('/login/github/redirect', [LoginController::class, 'githubRedirect'])
 //     Route::view('/login/github', [LoginController::class, 'github']);
 //     Route::view('/login/github/redirect', [LoginController::class, 'githubRedirect']);
 // });
-// Route::group(['middleware' => 'auth'], function() {
-//     Route::view('/dashboard', 'dashboard');
-// });
+Route::group(['middleware' => 'auth'], function() {
+    Route::view('/dashboard', 'dashboard');
+});
 
 require __DIR__.'/auth.php';
