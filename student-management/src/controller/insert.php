@@ -34,20 +34,17 @@ include '../model/member.php';
             }
             $school = check($member->get_school());
 
-
-
-            $query = "INSERT INTO Member (name, email, school) VALUES ('$name', '$email', '$school')";
-
-            $run = mysqli_query($conn, $query) or die(mysqli_error($conn));
-
+            $query = "INSERT INTO Member (name, email, school) VALUES ('$member->name', '$member->email', '$member->school')";
+    
+            $run = $conn->query($query) or die(mysqli_error($conn));
+    
             if ($run) {
-                echo 'Form submitted successfully';
-            } else {
-                echo 'Form not registered';
+                echo 'Form submitted successfully, please go back and refresh';
             }
         } else {
             echo 'All fields required';
         }
+        
     }
 
     function check($data)
@@ -57,4 +54,4 @@ include '../model/member.php';
         $data = htmlspecialchars($data);
         return $data;
     }
-    ?>
+?>
