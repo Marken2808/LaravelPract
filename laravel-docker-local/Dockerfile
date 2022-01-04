@@ -1,7 +1,7 @@
 
 
-FROM php:8.0.0-fpm-alpine
-RUN docker-php-ext-install pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+FROM php:7.3-apache
+RUN docker-php-ext-install pdo pdo_mysql mysqli && docker-php-ext-enable pdo_mysql mysqli
 
 
 # FROM nginx:stable-alpine
