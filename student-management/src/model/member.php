@@ -9,5 +9,17 @@ class Member {
         $this->email = $email;
         $this->school = $school;
     }
+
+    public function get_name() {
+        return $this->name;
+    }
+
+    public function get_email() {
+        return $this->email;
+    }
+
+    public function get_school() {
+        return $this->school;
+    }
 }
 ?>
