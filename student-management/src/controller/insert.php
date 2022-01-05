@@ -34,10 +34,9 @@ include '../model/member.php';
             }
             $school = check($member->get_school());
 
+
             $query = "INSERT INTO Member (name, email, school) VALUES ('$member->name', '$member->email', '$member->school')";
-    
             $run = $conn->query($query) or die(mysqli_error($conn));
-    
             if ($run) {
                 echo 'Form submitted successfully, please go back and refresh';
             }

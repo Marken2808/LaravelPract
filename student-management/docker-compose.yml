@@ -9,7 +9,6 @@ services:
     container_name: mysql8
     environment:
       - MYSQL_ROOT_PASSWORD=secret
-      - MYSQL_TCP_PORT=3306
     volumes:
       - datafiles:/var/lib/mysql
     restart: always
@@ -33,7 +32,6 @@ services:
       dockerfile: Dockerfile
     environment:
       - MYSQL_DBHOST=mysql
-      - MYSQL_DBPORT=3306
       - MYSQL_DBUSER=root
       - MYSQL_DBPASS=secret
       - MYSQL_DBNAME=interviewdb

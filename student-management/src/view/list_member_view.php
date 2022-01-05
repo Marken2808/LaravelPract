@@ -26,7 +26,7 @@ class MemberView extends MemberDAO {
             }
             echo "</table>";
           } else {
-            echo "0 results";
+            echo "\n0 results";
           }
     }
 
