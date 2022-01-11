@@ -28,10 +28,10 @@ services:
       - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD=secret
-      - MYSQL_DBHOST=mysql
-      - MYSQL_DBUSER=root
-      - MYSQL_DBPASS=secret
-      - MYSQL_DBNAME=propertydb
+      - DB_HOSTNAME=mysql
+      - DB_USERNAME=root
+      - DB_PASSWORD=secret
+      - DB_DATABASE=property
     volumes:
       - datafile:/var/lib/mysql
     restart: always
